@@ -639,6 +639,7 @@ open class SessionManager {
     ///
     /// - returns: The created `StreamRequest`.
     @discardableResult
+    @available(iOS 9.0, *)
     open func stream(withHostName hostName: String, port: Int) -> StreamRequest {
         return stream(.stream(hostName: hostName, port: port))
     }
@@ -653,12 +654,14 @@ open class SessionManager {
     ///
     /// - returns: The created `StreamRequest`.
     @discardableResult
+    @available(iOS 9.0, *)
     open func stream(with netService: NetService) -> StreamRequest {
         return stream(.netService(netService))
     }
 
     // MARK: Private - Stream Implementation
 
+    @available(iOS 9.0, *)
     private func stream(_ streamable: StreamRequest.Streamable) -> StreamRequest {
         let task = streamable.task(session: session, adapter: adapter, queue: queue)
         let request = StreamRequest(session: session, task: task, originalTask: streamable)
