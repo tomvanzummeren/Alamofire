@@ -609,6 +609,7 @@ extension SessionDelegate: URLSessionStreamDelegate {
     ///
     /// - parameter session:    The session.
     /// - parameter streamTask: The stream task.
+    @available(iOS 9.0, *)
     open func urlSession(_ session: URLSession, readClosedFor streamTask: URLSessionStreamTask) {
         streamTaskReadClosed?(session, streamTask)
     }
@@ -617,6 +618,7 @@ extension SessionDelegate: URLSessionStreamDelegate {
     ///
     /// - parameter session:    The session.
     /// - parameter streamTask: The stream task.
+    @available(iOS 9.0, *)
     open func urlSession(_ session: URLSession, writeClosedFor streamTask: URLSessionStreamTask) {
         streamTaskWriteClosed?(session, streamTask)
     }
@@ -625,6 +627,7 @@ extension SessionDelegate: URLSessionStreamDelegate {
     ///
     /// - parameter session:    The session.
     /// - parameter streamTask: The stream task.
+    @available(iOS 9.0, *)
     open func urlSession(_ session: URLSession, betterRouteDiscoveredFor streamTask: URLSessionStreamTask) {
         streamTaskBetterRouteDiscovered?(session, streamTask)
     }
@@ -635,6 +638,7 @@ extension SessionDelegate: URLSessionStreamDelegate {
     /// - parameter streamTask:   The stream task.
     /// - parameter inputStream:  The new input stream.
     /// - parameter outputStream: The new output stream.
+    @available(iOS 9.0, *)
     open func urlSession(
         _ session: URLSession,
         streamTask: URLSessionStreamTask,
